@@ -62,6 +62,16 @@ cd size
 python -m pytest -v
 ```
 
+## Benchmarks
+
+| Test | Files | manta-size | du (baseline) |
+|------|-------|-----------|---------------|
+| Small | 10 | 0.04s, 0.04MB | 0.004s, 0.07MB |
+| Medium | 50 | 0.04s, 0.04MB | 0.004s, 0.06MB |
+| Large | 100 | 0.04s, 0.04MB | 0.004s, 0.06MB |
+
+Run your own: `python3 benchmark_size.py`
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
