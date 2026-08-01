@@ -86,7 +86,7 @@ def main():
             test_dir = create_test_dir(tmpdir, num_files, 3)
 
             # Benchmark manta-size
-            size_script = os.path.join(os.path.dirname(__file__), "..", "size.py")
+            size_script = os.path.join(os.path.dirname(__file__), "size.py")
             if os.path.exists(size_script):
                 r = benchmark_tool(
                     "manta-size", [sys.executable, size_script, test_dir], test_dir
