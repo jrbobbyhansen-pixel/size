@@ -1,20 +1,10 @@
-# size — CLI directory size analyzer
+# size — CLI Directory Size Analyzer
 
-Recursively calculate directory sizes with human-readable output, sorting,
-depth control, and file-type filtering. Pure Python, zero external deps.
-
-## Install
+Analyze directory sizes with human-readable output and sorting. Recursively calculate directory sizes with depth control and file-type filtering. **Zero external dependencies** — pure Python stdlib.
 
 ```bash
-# Clone or copy size.py somewhere in your PATH
-chmod +x size.py
-ln -s "$(pwd)/size.py" ~/.local/bin/size
-```
-
-Or just run it directly:
-
-```bash
-python3 size.py /some/dir
+curl -sS https://raw.githubusercontent.com/jrbobbyhansen-pixel/size/main/size.py -o /usr/local/bin/size
+chmod +x /usr/local/bin/size
 ```
 
 ## Usage
@@ -58,8 +48,20 @@ size --version
 - **Raw mode** — `--raw` outputs exact byte counts
 - **Portable** — works on macOS, Linux, WSL
 
-## Tests
+## Install via pip
 
 ```bash
-python3 -m unittest tests/test_size.py -v
+pip install size
 ```
+
+## Development
+
+```bash
+git clone https://github.com/jrbobbyhansen-pixel/size.git
+cd size
+python -m pytest -v
+```
+
+## License
+
+MIT — see [LICENSE](LICENSE).
