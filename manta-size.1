@@ -1,0 +1,52 @@
+.TH MANTA-SIZE 1 "manta-size v1.0.0" "Manta Tools" "User Commands"
+.SH NAME
+manta-size \- analyze directory sizes from the command line
+.SH SYNOPSIS
+.B size [options] [path]
+.SH DESCRIPTION
+Recursively calculate directory sizes with human-readable output, sorting, depth control, and file-type filtering. Zero external dependencies.
+.SH OPTIONS
+.TP
+.B path
+Directory or file to analyze (default: current directory)
+.TP
+.B -d, --depth N
+Maximum recursion depth (default: 1)
+.TP
+.B -t, --type EXT
+Filter by file extension (e.g. .py, .md)
+.TP
+.B --no-sort
+Disable sorting by size
+.TP
+.B --raw
+Output raw bytes instead of human-readable
+.TP
+.B --version
+Show version and exit
+.SH EXAMPLES
+.TP
+Analyze current directory
+.B size
+.TP
+Deep scan (3 levels)
+.B size -d 3 /var/log
+.TP
+Only Python files
+.B size -t .py src/
+.TP
+Raw bytes output
+.B size --raw /tmp
+.SH EXIT CODES
+.TP
+.B 0
+Success
+.TP
+.B 1
+Path does not exist or cannot be read
+.SH AUTHOR
+Bobby Hansen Jr. (Hansen Capital Group LLC)
+.SH REPORTING BUGS
+https://github.com/jrbobbyhansen-pixel/size/issues
+.SH COPYRIGHT
+Copyright 2026 Hansen Capital Group LLC. License MIT.
